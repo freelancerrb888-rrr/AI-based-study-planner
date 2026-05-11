@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Setup Study Planner</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <h2 class="logo">AI Study Planner</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="setup.html">Setup</a>
+      <a href="dashboard.html">Dashboard</a>
+      <button id="resetBtn" onclick="resetApp()">Reset</button>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <h1>Setup Your Study Plan</h1>
+
+    <div class="card">
+      <h2>Study Information</h2>
+
+      <input type="text" id="studyGoal" placeholder="Enter your study goal"/>
+
+      <input type="text" id="subjects" placeholder="Subjects (comma separated)"/>
+
+      <input type="number" id="hoursPerDay" placeholder="Available study hours per day"/>
+    </div>
+
+    <div class="card">
+      <h2>Add Study Tasks</h2>
+
+      <input type="text" id="taskName" placeholder="Task Name"/>
+
+      <input type="text" id="taskSubject" placeholder="Subject"/>
+
+      <input type="date" id="taskDeadline"/>
+
+      <select id="taskPriority">
+        <option value="high">High Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="low">Low Priority</option>
+      </select>
+
+      <button onclick="addTask()">Add Task</button>
+
+      <div id="taskList"></div>
+    </div>
+
+    <button class="generate-btn" onclick="generateSchedule()">
+      Generate AI Schedule
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+  <footer class="footer">
+    <p>Built to help students study smarter</p>
+    <p>© 2026 AI Study Planner | By Rahila </p>
+  </footer>
+</body>
+</html>

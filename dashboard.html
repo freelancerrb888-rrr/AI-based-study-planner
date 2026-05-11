@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <h2 class="logo">AI Study Planner</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="setup.html">Setup</a>
+      <a href="dashboard.html">Dashboard</a>
+      <button id="resetBtn" onclick="resetApp()"> Reset </button>
+ </div>
+  </nav>
+
+  <div class="container">
+
+    <h1>AI Study Dashboard</h1>
+
+    <div class="dashboard-grid">
+
+      <div class="card">
+        <h2>Study Schedule</h2>
+        <div id="scheduleContainer"></div>
+      </div>
+
+      <div class="card">
+        <h2>Progress Tracker</h2>
+
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+
+        <p id="progressText"></p>
+
+        <h3>Exam Readiness Score</h3>
+
+        <div class="score-box">
+          <span id="readinessScore">0%</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Task Actions</h2>
+        <div id="taskActions"></div>
+      </div>
+
+      <div class="card tutor-card">
+        <h2>Ask AI Tutor</h2>
+
+        <input type="text" id="aiQuestion" placeholder="Ask any topic..."/>
+
+        <button onclick="askAITutor()">Ask AI</button>
+
+        <div id="aiResponse"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
